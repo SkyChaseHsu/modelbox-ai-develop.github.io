@@ -1,0 +1,45 @@
+<div class="fixed-top modelbox-navbar-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-light modelbox-navbar">
+    <a style="font-weight: bold; color: #1756a9" class="navbar-brand" href="#">
+      <img
+        src="{{ 'modelbox-icon.svg' | prepend: site.img_path }}"
+        width="30"
+        height="30"
+        alt=""
+      />
+      {{ site.title | escape }}
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {%- if site.data.nav-items -%} {%- for item in site.data.nav-items -%}
+        {%- if item.type == 'link' -%}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ item.link }}" target="_blank">
+            {{ item.title | escape }}
+          </a>
+        </li>
+        {%- endif -%} {%- if item.type == 'dropdown' -%}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-expanded="false"
+            style="color: black"
+          >
+            {{ item.title | escape }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {%- for subitem in item.dropdown -%}
+            <a class="dropdown-item" href="#">{{ subitem.title | escape }}</a>
+            {%- endfor -%}
+          </div>
+        </li>
+        {%- endif -%} {%- endfor -%} {%- endif -%}
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,20 @@
+<div class="compatibility-banner">
+  <h5 class="modelbox-banner-header">{{site.data.locale.compatibility}}</h5>
+
+  {%- if site.data.compatibility -%}
+  <div class="container" style="margin: 0 100px">
+    <div class="row">
+      {%- for item in site.data.compatibility -%}
+      <div class="compatibility-banner-card col-md-4 col-sm-12">
+        <h6 class="modelbox-card-header">{{item.title}}</h6>
+        <div class="modelbox-card-content">
+          {%- for content-item in item.content -%}
+          <div>{{content-item.title}}</div>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endif -%}
+</div>

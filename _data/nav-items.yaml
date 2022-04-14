@@ -1,0 +1,35 @@
+# 导航栏
+
+# TODO 开发文档/白皮书链接
+- title: 文档
+  type: dropdown
+  dropdown:
+    - title: 开发文档
+      type: link
+      link:
+    - title: 白皮书
+      type: link
+      link:
+
+- title: 代码
+  type: dropdown
+  dropdown:
+    - title: GitHub
+      type: link
+      link: https://github.com/modelbox-ai/modelbox
+    - title: Gitee
+      type: link
+      link: https://gitee.com/modelbox/modelbox
+
+- title: 教程
+  type: link
+  link: https://space.bilibili.com/503635713/channel/seriesdetail?sid=2130880&ctype=0
+
+- title: 社区
+  type: link
+  link: https://developer.huaweicloud.com/develop/aigallery/article/list
+
+# TODO 案例链接
+- title: 案例
+  type: link
+  link:
