@@ -1,3 +1,16 @@
+<script>
+  function useNow() {
+    window.open('https://hub.docker.com/u/modelbox');
+  }
+  function getStarted() {
+    window.open('http://modelbox-ai.com/modelbox-book/');
+  }
+  function tryNow() {
+    window.open(
+      'http://modelbox-ai.com/modelbox-book/solution/car-detect.html',
+    );
+  }
+</script>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li
@@ -10,24 +23,24 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img
-        src="{{ 'carousel-1-compressed.png' | prepend: site.img_path }}"
+        src="{{ 'carousel-1.jpg' | prepend: site.img_path }}"
         class="d-block w-100"
         alt="..."
       />
       <div class="row">
         <div
           class="carousel-caption d-none d-md-block text-left text-dark col-5"
+          style="top: 50%; transform: translateY(-50%)"
         >
-          <!-- TODO 使用链接 -->
-          <h5 style="font-weight: bold; color: #1756a9">
+          <h5 class="carousel-caption-title">
             {{ site.title | escape }}
           </h5>
           <p>{{ site.description | escape }}</p>
           <div class="button-group">
-            <button class="button-primary-light">
+            <button class="button-primary-light" onclick="useNow()">
               {{ site.data.locale.useNow }}
             </button>
-            <button class="button-primary-dark">
+            <button class="button-primary-dark" onclick="getStarted()">
               {{ site.data.locale.getStarted }}
             </button>
           </div>
@@ -43,15 +56,16 @@
       <div class="row">
         <div
           class="carousel-caption d-none d-md-block text-left text-dark col-5"
+          style="top: 50%; transform: translateY(-50%)"
         >
-          <h5 style="font-weight: bold; color: #1756a9">
+          <h5 class="carousel-caption-title">
             {{ site.data.locale.EfficientDevelopment }}
           </h5>
           <p>
             {{ site.data.locale.EfficientDevelopmentDetail }}
           </p>
           <div class="button-group">
-            <button class="button-primary-light">
+            <button class="button-primary-light" onclick="tryNow()">
               {{ site.data.locale.tryNow }}
             </button>
           </div>

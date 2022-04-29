@@ -6,10 +6,10 @@
   dropdown:
     - title: 开发文档
       type: link
-      link:
+      link: http://modelbox-ai.com/modelbox-book/
     - title: 白皮书
       type: link
-      link:
+      link: /modelbox-ai-develop.github.io/standard-book/index.html
 
 - title: 代码
   type: dropdown
@@ -29,7 +29,6 @@
   type: link
   link: https://developer.huaweicloud.com/develop/aigallery/article/list
 
-# TODO 案例链接
 - title: 案例
   type: link
-  link:
+  link: http://modelbox-ai.com/modelbox-book/solution/solution.html

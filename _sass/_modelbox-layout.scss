@@ -497,7 +497,7 @@ $--modelbox-banner-card-gap: 8px;
 
 .banner-base {
   background-color: $--modelbox-common-color-bg-gray;
-  padding: $--modelbox-common-space-5x 0;
+  padding: $--modelbox-common-space-10x 0;
 
   @extend .flex-rows;
   align-items: center;
@@ -640,11 +640,11 @@ $--modelbox-banner-card-gap: 8px;
 .compatibility-banner {
   @extend .banner-base;
 
-  background: url('../assets/img/banner-compatibility-bg-compressed.png')
-    no-repeat center;
+  background: url('../assets/img/banner-compatibility-bg-2.jpg') no-repeat
+    center bottom;
   background-size: cover;
   width: 100%;
-  height: 450px;
+  height: 400px;
 
   @include media-query($modelbox-on-palm) {
     height: 650px;
@@ -677,7 +677,65 @@ $--modelbox-banner-card-gap: 8px;
   gap: $--modelbox-common-space-2x;
   min-height: 150px;
 
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: white;
   padding: $--modelbox-common-space-3x;
   box-shadow: $--modelbox-common-shadow-1-down;
+}
+
+// 适配列表
+.compatibility-list {
+  @extend .flex-rows;
+  gap: $--modelbox-common-space-3x;
+  width: 100%;
+}
+
+// 适配列表
+.compatibility-list-item {
+  width: 300px;
+  background-color: $--modelbox-common-color-bg-white-emphasize;
+  text-align: center;
+  padding: $--modelbox-common-space-base $--modelbox-common-space-5x;
+}
+
+.modelbox-button-link {
+  color: white !important;
+  &:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+}
+
+.modelbox-button-link-dark {
+  color: $--modelbox-theme-color !important;
+  &:hover {
+    color: $--modelbox-theme-color !important;
+    text-decoration: none;
+  }
+}
+
+.modelbox-brand {
+  border-bottom: 4px solid $--modelbox-theme-color;
+}
+
+// ICON标题
+.modelbox-brand-text {
+  font-weight: bold;
+  color: $--modelbox-theme-color !important;
+}
+
+// 轮播图标题
+.carousel-caption-title {
+  font-weight: bold;
+  color: $--modelbox-theme-color !important;
+}
+
+.modelbox-nav-item {
+  margin-left: 70px;
+}
+
+// 适用对象 文字排版
+.modelbox-intended-for {
+  @extend .flex-rows;
+  gap: $--modelbox-common-space-3x;
+  justify-content: center;
 }
