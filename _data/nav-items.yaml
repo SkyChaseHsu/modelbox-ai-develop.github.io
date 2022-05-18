@@ -32,3 +32,13 @@
 - title: 案例
   type: link
   link: http://modelbox-ai.com/modelbox-book/solution/solution.html
+
+- title: 下载
+  type: dropdown
+  dropdown:
+    - title: 镜像
+      type: link
+      link: https://hub.docker.com/u/modelbox
+    - title: Releases
+      type: link
+      link: https://github.com/modelbox-ai/modelbox/releases
